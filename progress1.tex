@@ -53,27 +53,32 @@ meeting, short-term goals and the meeting schedule for the rest of the semester
 was discussed. During the meeting, we also received feedback on our final 
 deliveravbles from last semester. Following this meeting, follow-up meeting was
 held to check our progress and verify the feasability of the new goals for 
-this term. 
+this term.\newline
+
+A last meeting was held with our supervisor on January 19th to demo the work
+accomplished during the first work session. 
 
 \section*{Project Readings}
 There were no project readings identified since the previous report.
 
 \section*{Recent Progress}
-We continued our previous work on the CAN bus communication between the Arduino
-and a laptop. This communication work allows us to verify the integrity of the 
-link on the Arduino side. So far, two Arduino units can communicate the 
-contents of a limited-size, statically programmed buffer. More advanced 
-sharing of data will be added as discussed in future plans.\newline
+We continued our previous work on the CAN bus communication. An Arduino was set
+up as a write node, and both an Arduino and a CAN handle connected to a laptop 
+were set up as read nodes. Both two-node and 3 node systems were tested. 
+Initial steps to read sensor data and transmit it over the CAN communication
+channel were taken.\newline
 
-We also added tools for collaborative report writing and source control. These
-tools will allow us to change the workflow to a more collaborative, end-goal 
-based flow as opposed to last semester's parallel, independent flow. 
+We also added tools for collaborative report writing and source version control.
+These tools will allow us to change the workflow to a more collaborative, 
+end-goal based flow.
 
 \section*{Future Plans}
-For the following weeks, the plan is to establish the communication links for 
-the entire system. After testing their integrity and usbaility, we will 
-develop them to be able to pass meaningful messages with sensor data and 
-possibly response commands. This is the beginning of a closed feedback loop.
+For the following weeks, the plan is to further test configurations of the
+communications links. This includes collision handling on a multiple write-node
+network and priority message handling. Once the transmission of sensor data is
+complete, the receiving Arduino node will have to respond by driving a circuit.
+This circuit will be designed in conjunction with the supervisor. This response
+will be used to close the feedback loop.
 
 \section*{Group Work Report}
 So far, the work has been adequately and fairly shared bewteen two team members,
