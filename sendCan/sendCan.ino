@@ -27,7 +27,7 @@ START_INIT:
     }
 }
 
-unsigned char stmp[8] = {121, 101, 106, 97, 110, 100, 114, 111};
+unsigned char stmp[8] = {8, 101, 106, 97, 110, 100, 114, 111};
 void loop()
 {
     // send data:  id = 0x00, standrad frame, data len = 8, stmp: data buf
@@ -40,7 +40,7 @@ void loop()
     }
     Serial.println();
     Serial.println("-----------------");
-    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    CAN.sendMsgBuf(0xFF, 0, 8, stmp);
     delay(100);                       // send data per 100ms
 }
 
