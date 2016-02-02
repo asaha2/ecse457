@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title{Progress Report 1}
+\date{}
+\maketitle
+\section*{Project Title} 
+Transmission Control System Design using CRIO Real Time Controller:
+Data Gathering and Actuator Control
+\section*{Team Members}
+Group 35 \newline
+
+\hangindent=17.62482pt
+\hangafter=1
+Shayan Ahmad \\
+260350431 \\
+shayan.ahmad@mail.mcgill.ca \newline
+
+\hangindent=17.62482pt
+\hangafter=1
+Alejandro Carboni Jimenez \\
+260523638 \\
+alejandro.carbonijimenez@mail.mcgill.ca \newline
+
+\hangindent=17.62482pt
+\hangafter=1
+Aditya Saha \\
+260453165 \\
+aditya.saha@mail.mcgill.ca
+
+\section*{Supervisors}
+\hangindent=17.62482pt
+\hangafter=1
+Yingxuan Duan PhD.\\ 
+Research Associate\newline 
+
+\hangindent=17.62482pt
+\hangafter=1
+Benoit Boulet PhD.\\
+Associate Professor - Department of Electrical and Computer Engineering\\
+Associate Chair - Operations
+
+\newpage
+\section*{Group Meetings with Advisor}
+A preliminary group meeting was held on January 12th to establish the
+strategy for this semester's work. \newline
+
+A meeting was held with our immediate supervisor on January 13th. During the
+meeting, short-term goals and the meeting schedule for the rest of the semester
+was discussed. During the meeting, we also received feedback on our final 
+deliveravbles from last semester. Following this meeting, follow-up meeting was
+held to check our progress and verify the feasability of the new goals for 
+this term.\newline
+
+A last meeting was held with our supervisor on January 19th to demo the work
+accomplished during the first work session. 
+
+\section*{Project Readings}
+The CAN J1939 specification document has been provided for us by the supervisor.
+
+\section*{Recent Progress}
+We continued our previous work on the CAN bus communication. An Arduino was set
+up as a write node, and both an Arduino and a CAN handle connected to a laptop 
+were set up as read nodes. Both two-node and 3 node systems were tested. 
+Initial steps to read sensor data and transmit it over the CAN communication
+channel were taken.\newline
+
+We also added tools for collaborative report writing and source version control.
+
+\section*{Future Plans}
+For the following weeks, the plan is to further test configurations of the
+communications links. We will henceforth adhere to the J1939 CAN protocol.
+The configuration includes collision handling on a multiple write-node
+network and priority message handling. Once the transmission of sensor data is
+complete, the receiving Arduino node will have to respond by driving a circuit.
+This circuit will be designed in conjunction with the supervisor. This response
+will be used to close the feedback loop.
+
+\section*{Group Work Report}
+So far, the work has been adequately and fairly shared bewteen two team members,
+Aditya and Alejandro. The third team member, Shayan Ahmad, has not been present
+since the beginning of the term. We two are still awaiting an official notice
+of his plans for the semester. The supervisor has been made aware of the
+situation. At the moment of writing this report, he has not made any
+contributions to the work.
+
+\end{document}
