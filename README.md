@@ -14,5 +14,7 @@ Kvasser handle.
 
 ## Questions
 Any questions can be addressed to 
+
 aditya.saha@mail.mcgill.ca
+
 alejandro.carbonijimenez@mail.mcgill.ca
