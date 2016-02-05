@@ -4,7 +4,7 @@
 \setlength{\parindent}{0pt}
 
 \begin{document}
-\title{Progress Report 1}
+\title{Progress Report 2}
 \date{}
 \maketitle
 \section*{Project Title} 
@@ -59,32 +59,34 @@ A last meeting was held with our supervisor on January 19th to demo the work
 accomplished during the first work session. 
 
 \section*{Project Readings}
-The CAN J1939 specification document has been provided for us by the supervisor.
+Specification document corresponding to the newly acquired data logging module.
 
 \section*{Recent Progress}
-We continued our previous work on the CAN bus communication. An Arduino was set
-up as a write node, and both an Arduino and a CAN handle connected to a laptop 
-were set up as read nodes. Both two-node and 3 node systems were tested. 
-Initial steps to read sensor data and transmit it over the CAN communication
-channel were taken.\newline
+The J1939 variant of the CAN communication protocol was established. An Arduino
+was set up as a write node, and both an Arduino and a CAN handle connected to a
+laptop were set up as read nodes. Rigorous testings were carried out 
+subsequently with both two and three node configuration to check for integrity 
+of the transmitted data, bus arbitration and collision handling. Furthermore a
+sensor was introduced to the CAN network to to simulate a more realistic model
+and tests checking for consistency of the network were carried out.\newline
 
-We also added tools for collaborative report writing and source version control.
+The project source code base has been updated and shared with the immediate 
+supervisor for ease of reference and discussion. 
 
 \section*{Future Plans}
-For the following weeks, the plan is to further test configurations of the
-communications links. We will henceforth adhere to the J1939 CAN protocol.
-The configuration includes collision handling on a multiple write-node
-network and priority message handling. Once the transmission of sensor data is
-complete, the receiving Arduino node will have to respond by driving a circuit.
-This circuit will be designed in conjunction with the supervisor. This response
-will be used to close the feedback loop.
+In the following weeks the system implementation will be updated to include 
+the data logging module. Furthermore new force sensor will be acquired and 
+calibration tests will be exercised. A driving circuit will also be designed
+to synergize with the Arduino and close the feedback loop. Once the supervisor
+provides the implementation of CAN transmission on cRIO module, the individual
+system components will be integrated and tested.
 
 \section*{Group Work Report}
-So far, the work has been adequately and fairly shared bewteen two team members,
-Aditya and Alejandro. The third team member, Shayan Ahmad, has not been present
-since the beginning of the term. We two are still awaiting an official notice
-of his plans for the semester. The supervisor has been made aware of the
-situation. At the moment of writing this report, he has not made any
-contributions to the work.
+All the work so far has been evenly shared between two team members, Aditya and
+Alejandro. The third team member has officially informed of his intention to 
+pursue an internship in a different city and work remotely. However due to the 
+nature of current work necessitating lab attendance, no work has been delegated 
+to him. At the moment of writing this report, Shayan Ahmad has not made any
+contributions to the project.
 
 \end{document}
