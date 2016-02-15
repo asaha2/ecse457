@@ -54,7 +54,7 @@ void setup()
   Serial.println("Card initialized.");
   
   // Open up the file we're going to log to
-  dataFile = SD.open("datalog.txt", FILE_WRITE);
+  dataFile = SD.open("datalog.csv", FILE_WRITE);
   if(!dataFile){
     Serial.println("Error opening datalog.txt");
     // Wait forever since we cant write data
@@ -80,46 +80,46 @@ void loop()
   // Check for received J1939 messages
   if(j1939Receive(&lPGN, &nPriority, &nSrcAddr, &nDestAddr, nData, &nDataLen) == 0)
   {
-        sprintf(sString, "PGN: 0x%X Src: 0x%X Dest: 0x%X ", (int)lPGN, nSrcAddr, nDestAddr);
+    sprintf(sString, "PGN: 0x%X Src: 0x%X Dest: 0x%X ", (int)lPGN, nSrcAddr, nDestAddr);
+    Serial.print(sString);
+    if(nDataLen == 0 )
+      Serial.print("No Data.\n\r");
+    else
+    {
+      Serial.print("Data: ");
+      for(int nIndex = 0; nIndex < nDataLen; nIndex++)
+      {            
+        sprintf(sString, "0x%X ", nData[nIndex]);
         Serial.print(sString);
-        if(nDataLen == 0 )
-          Serial.print("No Data.\n\r");
-        else
-        {
-          Serial.print("Data: ");
-          for(int nIndex = 0; nIndex < nDataLen; nIndex++)
-          {            
-            sprintf(sString, "0x%X ", nData[nIndex]);
-            Serial.print(sString);
-            
-          }// end for
-          Serial.print("\n\r");
-          
-          int pressure;
-          int byte0 = nData[0];
-          int byte1 = nData[1];
-          int byte2 = nData[2];
-          int byte3 = nData[3];
-          pressure = (byte0 << 24) | (byte1 << 16) | (byte2 << 8) | (byte3);
-          sprintf(sString,"Pressure: %d",pressure);
-          Serial.println(sString);
-          dataString = dataString + "Pressure= " + sString + ", ";
-          
-          int temperature;
-          byte0 = nData[4];
-          byte1 = nData[5];
-          byte2 = nData[6];
-          byte3 = nData[7];
-          temperature = (byte0 << 24) | (byte1 << 16) | (byte2 << 8) | (byte3);
-          sprintf(sString,"Temperature: %d",temperature);
-          Serial.println(sString);
-          dataString = dataString + "Temperature= " + sString;
+        
+      }// end for
+      Serial.print("\n\r");
+      
+      int pressure;
+      int byte0 = nData[0];
+      int byte1 = nData[1];
+      int byte2 = nData[2];
+      int byte3 = nData[3];
+      pressure = (byte0 << 24) | (byte1 << 16) | (byte2 << 8) | (byte3);
+      sprintf(sString,"Pressure: %d",pressure);
+      Serial.println(sString);
+      dataString = dataString + sString + ", ";
+      
+      int temperature;
+      byte0 = nData[4];
+      byte1 = nData[5];
+      byte2 = nData[6];
+      byte3 = nData[7];
+      temperature = (byte0 << 24) | (byte1 << 16) | (byte2 << 8) | (byte3);
+      sprintf(sString,"Temperature: %d",temperature);
+      Serial.println(sString);
+      dataString = dataString + sString;
 
-          if(dataFile.println(dataString) == 0){
-            Serial.println("Error writing to file!");
-          }
-          dataFile.flush();
-        }// end else
+      if(dataFile.println(dataString) == 0){
+        Serial.println("Error writing to file!");
+      }
+      dataFile.flush();
+    }// end else
         
   }// end if
 
