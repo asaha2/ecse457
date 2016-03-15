@@ -71,7 +71,7 @@ void loop()
           int force;
           int byte0 = nData[0];
           int byte1 = nData[1];
-          force = (byte0 << 8) || byte1;
+          force = (byte0 << 8) | byte1;
           sprintf(sString,"Force: %d",force);
           Serial.println(sString);
         }// end else
