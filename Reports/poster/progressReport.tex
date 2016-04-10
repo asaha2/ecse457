@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title{Poster Preparation}
+\date{}
+\maketitle
+\section{Problem Statement}
+\subsection{Goal}
+Our project was to develop a code base for future Arduino-based prototyping for
+an existing transmission control system. CAN compatibility is required for 
+integration with the existing testbed and other development tools. 
+
+\subsection{Requirements}
+The delivered code base should consist of independent modules that have no external
+dependencies. The operations accomplished by the modules should be complete and 
+require minimal customization.
+
+\subsection{Objectives}
+\begin{itemize}
+	\item	Implement sensor reading for Arduino
+	\item	Transmit useful readings by CAN protocol
+	\item	Implement data logging on a receiving CAN node
+	\item	Integrate project-specific sensor into existing network
+\end{itemize}
+
+\subsection{Applications}
+\begin{itemize}
+	\item	Integration of digital and analog sensors with existing testbed
+	\item	Rapid prototyping with modules from code base
+\end{itemize}
+
+\section{Work accomplished}
+\begin{itemize}
+	\item	Integration of digital sensor with Arudino-based controller
+	\item	CAN network integration of Arduino
+		\begin{itemize}
+			\item	Standard CAN integration
+			\item	Implementation of J1939 variant
+		\end{itemize}
+	\item 	Integration of sensor into CAN network
+		\begin{itemize}
+			\item	Digital sensor
+			\item	Analog sensor with external circuitry
+		\end{itemize}
+	\item	Real time data logging of transmitted network information
+	\item	System validation using industry tools and typical
+		application parameters
+	\item	Out-of-the-box readiness of modules
+\end{itemize}
+
+\section{Conclusions}
+\begin{itemize}
+	\item	Agile concepts from software development useful
+		for various environments
+	\item	Important part of project was selecting tools and
+		systems, not developing from scratch
+	\item	Team work not comparable to previous experience and
+		required adaptive approach
+\end{itemize}	
+\end{document}

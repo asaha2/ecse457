@@ -1,0 +1,5 @@
+Specifications changed to exclude the compactRIO aspects 
+
+Integration with CAN network tested with Kvasser CanKing Lightleaf 2.
+
+Code base of independent modules 
